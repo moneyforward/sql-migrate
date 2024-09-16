@@ -125,7 +125,7 @@ func GetConnection(env *Environment) (*sql.DB, string, error) {
 
 	db, err := sql.Open(env.Dialect, env.DataSource)
 	if err != nil {
-		return nil, "", fmt.Errorf("cannot connect to database: %w", err)
+		return nil, "", fmt.Errorf("Cannot connect to database: %w", err)
 	}
 
 	// Make sure we only accept dialects that were compiled in.
