@@ -131,7 +131,7 @@ func GetConnection(env *Environment) (*sql.DB, string, error) {
 	// Make sure we only accept dialects that were compiled in.
 	_, exists := dialects[env.Dialect]
 	if !exists {
-		return nil, "", fmt.Errorf("unsupported dialect: %s", env.Dialect)
+		return nil, "", fmt.Errorf("Unsupported dialect: %s", env.Dialect)
 	}
 
 	return db, env.Dialect, nil
